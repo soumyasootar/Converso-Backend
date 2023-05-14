@@ -4,11 +4,11 @@ const cors = require("cors");
 const app = express();
 
 const dotenv = require("dotenv");
-const connectDB = require("./configs/db");
-const userRoute = require("./routes/userRoute");
-const { notFound, errorHandler } = require("./middlewares/errorMiddleware");
-const chatRoute = require("./routes/chatRoute");
-const messageRoute = require("./routes/messageRoute");
+const connectDB = require("./backend/configs/db");
+const userRoute = require("./backend/routes/userRoute");
+const { notFound, errorHandler } = require("./backend/middlewares/errorMiddleware");
+const chatRoute = require("./backend/routes/chatRoute");
+const messageRoute = require("./backend/routes/messageRoute");
 
 app.use(express.json()); //to accept JSOn data
 app.use(cors());
